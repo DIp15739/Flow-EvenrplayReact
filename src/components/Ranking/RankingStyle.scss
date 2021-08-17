@@ -1,0 +1,58 @@
+//Ranking Banner Start
+.rankingBannerMain{
+    img{
+        width: 100%;
+    }
+    .rankingBannerContent{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+    }
+}
+
+//Ranking Table Start
+.rankingTable{
+    background: #E2E6EB;
+    thead{
+        th{
+            padding: 20px;
+            color: #29313A;
+        }
+    }
+    tbody{
+        td{
+            padding: 20px;
+            color: rgba(30,39,58,0.7);
+            letter-spacing: 0.5px;
+            img{
+                margin-right: 5px;
+            }
+        }
+    }
+    .tableCollections{
+        background: -webkit-linear-gradient(#0067E0, #19C2D9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .table-striped>tbody>tr:nth-of-type(odd){
+        background: #E2E6EB;
+        &:hover{
+            background: transparent;
+        }
+    }
+    .collectionsImage{
+        width: 30px;
+        height: 30px;
+        border-radius: 50px;
+        object-fit: cover;
+    }
+    .digit{
+        font-weight: bold;
+        color: rgba(30,39,58,0.7);
+    }
+    .viewsdecrease{
+        color: #E10000;
+    }
+}

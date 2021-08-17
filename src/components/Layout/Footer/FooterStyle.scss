@@ -1,0 +1,110 @@
+.footer{
+    padding: 30px 50px;
+    background: #111B2D;
+    margin-top: 70px;
+    .footerLogo{
+        text-align: center;
+        margin-bottom: 35px;
+    }
+    .socialSearch{
+        h5{
+            color: #fff;
+            letter-spacing: 0.3px;
+            font-size: 16px;
+        }
+        ul{
+            padding-left: 0px;
+            li{
+                display: inline-block;
+                margin-right: 20px;
+            }
+        }
+        label{
+            display: none;
+        }
+        input{
+            background: transparent;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            border-radius: 0px;
+            border-bottom: 1px solid #848EA3;
+            color: #fff;
+            margin-top: 20px;
+            &:focus{
+                background: transparent;
+                box-shadow: none;
+                border-color: #fff;
+                color: #fff;
+            }
+        }
+    }
+    .linkHead{
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 16px;
+        margin-bottom: 18px;
+    }
+    
+    .extarnalLink{
+        color: #fff;
+        display: block;
+        text-decoration: none;
+        letter-spacing: 0.5px;
+        margin-bottom: 8px;
+        &:hover{
+            color: #fff;
+        }
+    }
+    
+    .internalLink{
+        color: #848EA3;
+        text-decoration: none;
+        margin-bottom: 8px;
+        display: block;
+        &:hover{
+            color: #fff;
+        }
+    }
+    
+    .copyRight{
+        text-align: center;
+        color: #848EA3;
+        letter-spacing: 0.5px;
+        font-size: 16px;
+        margin-top: 35px;
+        margin-bottom: 0px;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .footer{
+        .socialSearch{
+            input{
+                display: none;
+            }
+        }
+        .footerLink{
+            margin-bottom: 30px;
+        }
+        .copyRight{
+            margin-top: 25px;
+        }
+    }
+}
+
+@media only screen and (max-width: 575px){
+    .footer .socialSearch ul li{
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .footer .copyRight{
+        margin-top: 0px;
+    }
+    .footer{
+        padding: 30px 30px;
+    }
+}
+

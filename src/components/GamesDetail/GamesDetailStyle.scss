@@ -1,0 +1,253 @@
+.gameImage{
+    width: 85%;
+    img{
+        width: 100%;
+    }
+    .gameViewDate{
+        color: #848EA3;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        i{
+            margin-right: 5px;
+        }
+    }
+}
+
+.gameDetailMain{
+    margin-bottom: 80px;
+    .breadcrumb{
+        background: transparent;
+    }
+    .breadcrumb-item{
+        color: #848EA3;
+        a{
+           color: #848EA3;
+           text-decoration: none;
+        }
+    }
+    .breadcrumb-item.active{
+        color: #848EA3;
+    }
+    h3{
+        color: #fff;
+        font-size: 42px;
+        font-weight: bold;
+        margin-bottom: 25px;
+    }
+    .detailDigit{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #404C62;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+        .firstDetailDigit{
+            color: #fff;
+        }
+        .lastDetailDigit{
+            color: #fff;
+            text-align: end;
+        }
+        p{
+            margin-bottom: 0px;
+            color: #848EA3;
+        }
+        h5{
+            font-weight: bold;
+            font-size: 16px;
+            letter-spacing: 0.8px;
+        }
+    }
+    .price{
+        span:first-child{
+            color: #848EA3;
+            font-weight: 100;
+        }
+        span{
+            color: #fff;
+            font-size: 18px;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+    }
+    .detailfooter{
+        margin-top: 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .buttonOutline{
+            margin-right: 20px;
+        }
+        .shareStar{
+            color: #fff;
+            i{
+                margin-left: 10px;
+                color: #848EA3;
+            }
+        }
+    }
+}
+
+
+//Accordian Start
+
+.detailAccordian{
+    margin-bottom: 20px;
+    .accordion-item{
+        background: transparent;
+        border: 1px solid #fff;
+        border-radius: 0px;
+    }
+    .accordion-button{
+        background: transparent;
+        border-bottom: 1px solid #fff;
+        font-weight: bold;
+        color: #fff;
+        letter-spacing: 0.5px;
+        img{
+            margin-right: 15px;
+        }
+        &::after{
+            content: "";
+            background-image: url(../../assets/images/icon/upArrow.png)!important;
+            background-repeat: no-repeat;
+            background-size: 15px;
+            margin-top: 0px;
+            width: 25px;
+            height: 15px;
+        }
+        &:not(.collapsed)::after{
+            content: "";
+            background-image: url(../../assets/images/icon/upArrow.png)!important;
+            background-repeat: no-repeat;
+            background-size: 15px;
+            margin-top: -11px;
+            transform: rotate(-180deg);
+        }
+    }
+}
+
+.detailAccordianMain{
+    .createdBy{
+        margin-bottom: 15px;
+        img{
+            width: 35px;
+            height: 35px;
+            border-radius: 50px;
+            margin-right: 10px;
+            display: inline-block;
+        }
+        h6{
+            color: #848EA3;
+            font-weight: 100;
+            display: inline-block;
+            span{
+                color: #0B8EEF;
+            }
+        }
+        p{
+            color: #fff;
+        }
+    }
+    p{
+        margin-bottom: 5px;
+        color: #fff;
+        font-size: 14px;
+        text-align: justify;
+    }
+    .accordion-body{
+        height: 255px;
+        overflow-y: scroll;
+        &::-webkit-scrollbar{
+            width: 0px;
+        }
+    }
+}
+
+.listingsTable{
+    thead{
+        tr{
+            border-left: 1px solid #fff;
+            border-right: 1px solid #fff;
+            th{
+                color: #fff;
+                border-bottom: 1px solid #fff;
+                padding: 15px;
+            }
+        }
+    }
+    tbody{
+        tr{
+            background: transparent;
+            &:nth-of-type(odd){
+                background: transparent;
+            }
+            td{
+                color: #fff;
+                border-bottom: 0px;
+                border-top: 0px;
+                padding: 15px;
+            }
+        }
+    }
+    .loadMore{
+        color: #fff;
+        margin-top: 20px;
+        letter-spacing: 0.5px;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .CreatotsMarketPlace{
+        text-align: left;
+    }
+    img{
+        width: 30px;
+        height: 30px;
+        border-radius: 50px;
+        margin-right: 10px;
+    }
+}
+
+.gameDetailResponsive{
+    margin-bottom: 40px;
+    .detailfooter{
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #404C62;
+        padding-bottom: 20px;
+    }
+    .buttonOutline{
+        margin-top: 20px;
+        width: 100%;
+    }
+    h3{ 
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    .gameImage{
+        width: 100%;
+    }
+    .listingsTable .CreatotsMarketPlace{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .gameImage{
+        width: 100%;
+    }
+    .gameDetailWithout{
+        display: none;
+    }
+    .gameDetailWithoutImage{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .gameDetailResponsive{
+        display: none;
+    }
+}

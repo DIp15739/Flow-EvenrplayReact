@@ -1,0 +1,290 @@
+//Tabs Start
+.marketPlaceTabs{
+    .nav{
+        display: inline-block;
+    }
+    .nav-item{
+        display: inline-block;
+    }
+    .nav-link{
+        font-size: 40px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        padding-left: 0px;
+        color: #848EA3;
+        margin-right: 50px;
+        padding-right: 0px;
+    }
+    .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+        background: transparent;
+        border-style: solid;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        border-image: linear-gradient(45deg, #5719D9, #0D9CDF) 1;
+        border-width: 2px;
+        border-radius: 0px;
+    }
+}
+
+//NFT Search
+.NftSearchMain{
+    margin-top: 30px;
+    .searchGame{
+        position: relative;
+        label{
+            display: none;
+        }
+        input{
+            background: transparent;
+            border-color: rgba(132,142,163,1);
+            border-radius: 0px;
+            height: 45px;
+            padding: 10px 10px 10px 40px;
+            color: #0D9CDF;
+            &::placeholder{
+                color: #848EA3;
+                font-size: 16px;
+            }
+            &:focus{
+                box-shadow: none;
+            }
+        }
+        i{
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            color: rgba(132,142,163,1);
+        }
+    }
+}
+
+.statusMain{
+    border: 1px solid #848EA3;
+    height: 45px;
+    .statusLabel{
+        background: #848EA3;
+        display: inline-block;
+        padding: 10px 15px;
+        margin-right: 30px;
+        img{
+            margin-right: 8px;
+        }
+        span{
+            font-weight: bold;
+        }
+    }
+}
+
+.statusTab{
+    display: inline-block;
+    .nav{
+        display: inline-block;
+        position: relative;
+        top: -1px;
+    }
+    .nav-item{
+        display: inline-block;
+    }
+    .nav-link{
+        font-size: 14px;
+        margin-right: 30px;
+        font-weight: 100;
+        padding-top: 0px;
+    }
+    .nav-pills .nav-link.active, .marketPlaceTabs .nav-pills .show > .nav-link{
+        padding-bottom: 0px;
+        border-color: #fff;
+        border-image: linear-gradient(45deg, #fff, #fff) 1;
+    }
+}
+
+.priceMain{
+    border: 1px solid #848EA3;
+    height: 45px;
+    .priceLabel{
+        background: #848EA3;
+        padding: 10px 15px;
+        text-align: center;
+        i{
+            margin-right: 8px;
+        }
+        span{
+            font-weight: bold;
+        }
+    }
+    .priceInput{
+        div{
+            margin-bottom: 0px!important;
+        }
+        input{
+            display: inline-block;
+            background: transparent;
+            border-radius: 0px;
+            height: 45px;
+            border: 0px;
+            color: #fff;
+            &::placeholder{
+                color: #848EA3;
+                font-size: 16px;
+            }
+            &:focus{
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+.sortBy{
+    .dropdown{
+        .dropdown-toggle{
+            width: 100%;
+            height: 45PX;
+            background: #848EA3;
+            border-radius: 0PX;
+            border-color: transparent;
+            color: rgba(28, 38, 56, 1);
+            font-weight: bold;
+            &:focus{
+                box-shadow: none;
+            }
+            &:active{
+                background: #848EA3;
+                box-shadow: none!important;
+                border-color: transparent;
+                color: rgba(28, 38, 56, 1);
+            }
+            img{
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+
+//CREATORS TABLE START
+.creatorsTable{
+    margin-top: 30px;
+    background: rgba(67, 80, 103, 1);
+    .table{
+        border: 0px;
+    }
+    .table-bordered td, .table-bordered th{
+        border: 0px;
+    }
+    tr{
+        th{
+            color: #fff;
+        }
+        td{
+            padding: 15px;
+            color: #fff;
+            img{
+                width: 28px;
+                height: 28px;
+                border-radius: 50px;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.marketPlaceBannerMainResponsive{
+    text-align: center;
+    margin: 25px 0px 40px 0px;
+    h2{
+        color: #fff;
+        font-size: 40px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+    }
+}
+
+//NFTFilterTab
+.NFTFilterMain{
+    .nav{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .nftGameType{
+        max-width: 1229px;
+        overflow-x: scroll;
+        margin-bottom: 50px;
+    }
+    .nftGameType::-webkit-scrollbar {
+        width: 10px;
+    }
+    .nav-link{
+        font-size: 16px;
+        border: 1px solid #9400D3;
+        background: transparent;
+        padding: 10px 20px;
+        border-radius: 50px;
+        margin-right: 20px;
+    }
+    .nav-pills .nav-link.active, .marketPlaceTabs .nav-pills .show > .nav-link{
+        background: linear-gradient(90deg, #9400D3, #4B0082);
+        border-bottom: 0px;
+        border-radius: 50px;
+    }
+}
+
+.connectWallet{
+    border-style: solid;
+    border-width: 2px;
+    border-image: linear-gradient(45deg, #5719D9, #0D9CDF) 1;
+    padding: 8px 22px!important;
+    color: #fff!important;
+    letter-spacing: 0.5px;
+    transition: 0.5s all;
+    background: transparent;
+    &:hover{
+        background: linear-gradient(45deg, #5719D9, #0D9CDF);
+    }
+}
+
+@media only screen and (max-width: 991px){
+    .sortBy{
+        .dropdown{
+            .dropdown-toggle{
+                &::after{
+                    display: none!important;
+                }
+            }
+        }
+    }
+    .statusMain{
+        margin-bottom: 15px;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    .marketPlaceBannerMain{
+        display: none;
+    }
+    .NftSearchMain{
+        display: none;
+    }
+    .marketPlaceBannerMainResponsive{
+        display: block;
+    }
+    .marketPlaceTabs .nav-link{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (min-width: 577px){
+    .marketPlaceBannerMainResponsive{
+        display: none;
+    }
+    .NftSearchResponsive{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .sortBy{
+        margin-top: 15px;
+    }
+}

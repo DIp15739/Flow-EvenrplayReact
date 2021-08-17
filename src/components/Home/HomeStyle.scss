@@ -1,0 +1,162 @@
+$fontWhite: #fff;
+$fontBlue: #00A3FF; 
+$fontWhiteLight: rgba(255,255,255,0.7);
+
+//HOME BANNER START
+.homeBannerMain{
+    position: relative;
+    margin-bottom: 40px;
+    img{
+        height: 629px;
+        object-fit: cover;
+    }
+    .homeBannerContent{
+        position: absolute;
+        top: 0;
+        padding: 80px;
+        text-align: left;
+        width: 50%;
+        h2{
+            color: $fontWhite;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            font-size: 90px;
+            line-height: 90px;
+            margin-bottom: 20px;
+        }
+        p{
+            color: $fontWhiteLight;
+            font-size: 20px;
+            font-weight: 100;
+            letter-spacing: 0.5px;
+        }
+    }
+}
+
+@media only screen and (max-width: 991px){
+    .homeBannerMain{
+        .homeBannerContent{
+            padding: 20px;
+            h2{
+                font-size: 60px;
+                line-height: 60px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .homeBannerMain{
+        img{
+            height: 300px;
+            object-fit: cover;
+        }
+        .homeBannerContent{
+            width: 80%;
+            h2{
+                font-size: 50px;
+                line-height: 60px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 576px){
+    .homeBannerMain{
+        img{
+            height: 250px;
+            object-fit: cover;
+        }
+        .homeBannerContent{
+            width: 100%;
+            h2{
+                font-size: 50px;
+                line-height: 60px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .homeBannerMain{
+        img{
+            height: 250px;
+            object-fit: cover;
+        }
+        .homeBannerContent{
+            width: 100%;
+            padding: 10px;
+            h2{
+                font-size: 40px;
+                line-height: 50px;
+                margin-bottom: 10px;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 420px){
+    .homeBannerMain{
+        .homeBannerContent{
+            h2{
+                font-size: 30px;
+                line-height: 30px;
+                margin-bottom: 10px;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+//TOP GAMES START
+@media only screen and (max-width: 767px){
+    .HomeTopGame{
+        display: none;
+    }
+    .sideMargin{
+        margin-left: 0px!important;
+        margin-right: 0px!important;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .sliderMain{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .sliderMain .gameListMain{
+        padding: 0px;
+    }
+}
+
+.sliderMain{
+    .gameListMain{
+        padding: 15px;
+    }
+}
+
+//TOP CREATORS START
+.CreatotsMarketPlace{
+    text-align: center;
+    margin-top: 10px;
+    a{
+        font-weight: bold;
+        color: #fff;
+        letter-spacing: 0.5px;
+        text-decoration: none;
+        border-bottom: 3px solid ;
+        padding-bottom: 5px;
+        border-image: linear-gradient(45deg, #5719D9, #0D9CDF) 1;
+    }
+}
+

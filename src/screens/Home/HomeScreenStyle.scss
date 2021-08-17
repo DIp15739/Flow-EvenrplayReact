@@ -1,0 +1,42 @@
+.pageContent{
+    padding: 120PX 60px 30px 60px;
+}
+
+@media only screen and (max-width: 768px){
+    .pageContent{
+        padding: 100px 30px 30px 30px;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    .pageContent{
+        padding: 110px 30px 30px 30px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .pageContent{
+        padding: 100px 20px 30px 20px;
+    }
+}
+
+.sidePadding{
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.sideMargin{
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+@media only screen and (max-width: 576px){
+    .sidePadding{
+        padding-left: 00px;
+        padding-right: 00px;
+    }
+    .sideMargin{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
