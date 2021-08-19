@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, {useState, useEffect} from 'react';
 import {Navbar, Nav, NavDropdown, Dropdown, FormControl, Form} from 'react-bootstrap';
 import NavbarToggle from 'react-bootstrap/esm/NavbarToggle';
 import CompanyLogo from "../../../assets/images/header/everplayLogo.png";
@@ -9,13 +9,24 @@ import Input from '../../Common/Input/Input';
 import HeaderMenu from './HeaderMenu';
 import userProfile from "./../../../assets/images/profile/03.jpg";
 import "./HeaderStyle.scss";
+import * as fcl from '@onflow/fcl'
 
 export interface Props {
     withoutLogin? : any;
     withLogin? : any;
 }
 
+interface Iservices {
+    scoped: any
+}
+const servicesType:Iservices[] = [];
+
+
 const Header = ({withoutLogin, withLogin}: Props) =>{
+    const [user, setUser] = useState({loggedIn: null,addr:undefined,services:servicesType})
+    useEffect(() => fcl.currentUser().subscribe(setUser), [])
+    const userEmail = user.services?.find(r => (r.scoped !== undefined))?.scoped.email
+    
     const [search, setSearch] = useState('');
     const [navbarMain, setNavbar] = useState(false);
     const changeBackground = () =>{
@@ -40,30 +51,29 @@ const Header = ({withoutLogin, withLogin}: Props) =>{
                 </Navbar.Toggle>
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <HeaderMenu />
-                    {withoutLogin &&
-                    <Nav>
-                        <ButtonOutline text="Connect a Wallet" />
-                        <ButtonFill text="Login" />
-                    </Nav>
-                    }
-                    {withLogin &&
-                    <Nav>
+                    {user.loggedIn === null ? (
+                        <Nav>
+                            <ButtonOutline text="Connect a Wallet" />
+                            <ButtonFill onClick={fcl.logIn} text="Login" />
+                        </Nav>
+                    ) : (
+                        <Nav>
                         <ButtonFill text="Create NFT" />
                         <img src={userProfile} className="userProfile"/>
                         <Dropdown align="end" className="profileDropdown">
                             <Dropdown.Toggle id="dropdown-basic"><i className="fas fa-angle-down"></i></Dropdown.Toggle>
                             <Dropdown.Menu>
-                                <Dropdown.Item className="userName" >Mike Wazowski</Dropdown.Item>
+                                <Dropdown.Item className="userName" >{userEmail}</Dropdown.Item>
                                 <Dropdown.Divider />
                                 <Dropdown.Item href="#/action-2">Profile</Dropdown.Item>
                                 <Dropdown.Item href="#/action-3">Settings</Dropdown.Item>
                                 <Dropdown.Divider />
-                                <Dropdown.Item href="#/action-4">Log Out</Dropdown.Item>
+                                <Dropdown.Item onClick={fcl.unauthenticate}>Log Out</Dropdown.Item>
                                 <ButtonOutline text="Wallet Connected" />
                             </Dropdown.Menu>
                         </Dropdown>
                     </Nav>
-                    }
+                    )}
                 </Navbar.Collapse>
             </Navbar>
 

@@ -1,9 +1,14 @@
 import "./ButtonFillStyle.scss";
 
-const ButtonFill = ({text} : {text:any}) =>{
+export interface Props {
+    text: any;
+    onClick?: any;
+}
+
+const ButtonFill = ({text , onClick} : Props ) =>{
     return(
         <>
-            <button className="buttonFill" >{text}</button>
+            <button className="buttonFill" onClick={onClick} >{text}</button>
         </>
     );
 }
